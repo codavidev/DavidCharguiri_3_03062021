@@ -1,19 +1,16 @@
-body {
-  background-color: black;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.div {
-  width: 120px;
-  height: 120px;
-}
-.div .sous-div1 {
-  color: red;
-}
-.div .sous-div2 {
-  color: blue;
-}
-.div .sous-div2 .sous-div3 {
-  font-family: "sans-serif";
+.logo {
+  height: 63px;
+  padding-bottom: 13px;
+  padding-top: 22px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */
