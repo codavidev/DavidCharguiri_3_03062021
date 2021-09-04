@@ -1,0 +1,18 @@
+body {
+    background-color: black;
+}
+.div {
+    
+    width: 120px;
+    height: 120px;
+    .sous-div1 {
+        color:red;
+    }
+    .sous-div2 {
+        color:blue;
+        .sous-div3 {
+            font-family: 'sans-serif';
+        }
+    }
+  }
+  

@@ -1,0 +1,19 @@
+body {
+  background-color: black;
+}
+
+.div {
+  width: 120px;
+  height: 120px;
+}
+.div .sous-div1 {
+  color: red;
+}
+.div .sous-div2 {
+  color: blue;
+}
+.div .sous-div2 .sous-div3 {
+  font-family: "sans-serif";
+}
+
+/*# sourceMappingURL=main.css.map */
