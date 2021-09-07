@@ -10,7 +10,7 @@
     <!-- / FIN ICONS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <title>OhMyFood</title>
 </head>
 <body>
@@ -21,10 +21,51 @@
         </div>
     </header>
     <!-- / FIN HEADER -->
-    <div class="location">
-        <i class="fas fa-map-marker-alt"></i>
-        Paris, Belleville
-    </div>
-
+    
+    <main>
+        <div class="location">
+            <i class="fas fa-map-marker-alt"></i>
+            <input type="text" value="Paris, Belleville">
+        </div>
+        <div class="reservation">
+            <h1 class="reservation__heading">Réservez le menu qui vous convient</h1>
+            <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
+            <a class="btn--pink" href="">Explorer nos restaurants</a> 
+        </div>
+        <section class="fonctionnement">
+            <h1 class="fonctionnement__heading">Fonctionnement</h1>
+            <div class="fonctionnement__btn">
+                <span class="number">1</span>
+                <i class="fas fa-mobile-alt"></i>
+                <a>Choisissez un restaurant</a>
+            </div>
+            <div class="fonctionnement__btn">
+                <span class="number">2</span>
+                <i class="fas fa-mobile-alt"></i>
+                <a>Composez votre menu</a>
+            </div>
+            <div class="fonctionnement__btn">
+                <span class="number">3</span>
+                <i class="fas fa-mobile-alt"></i>
+                <a>Dégustez au restaurant</a>
+            </div>
+        </section>
+        <section class="restaurants">
+            <h1 class="restaurants__heading">Restaurants</h1>
+            <div class="restaurant-carte">
+                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
+                <div class="restaurant-carte__description">
+                    <div>
+                        <H2 class="restaurant-carte__heading">La pallette du goût</H2>
+                    <p>Ménilmontant</p>
+                    </div>
+                        <div class="heart">    
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+    </main>
 </body>
 </html>

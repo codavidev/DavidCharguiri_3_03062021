@@ -5,24 +5,176 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
+body {
+  width: 375px;
+}
+
+header {
+  width: 100%;
+}
+
 .logo {
   height: 63px;
-  padding-bottom: 13px;
+  padding-bottom: 14px;
   padding-top: 22px;
-  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
+}
+.logo img {
+  height: 30px;
+  width: 164px;
+  margin-left: 105px;
+  margin-right: auto;
 }
 
 .location {
   height: 50px;
+  padding-top: 0.5rem;
   display: flex;
-  padding-top: 1rem;
   background-color: #EAEAEA;
-  font-weight: 500;
+  box-shadow: inset 0px 4px 4px -4px rgba(0, 0, 0, 0.4);
 }
 .location i {
-  padding: 0 1rem 0 6.5rem;
+  padding: 0.5rem 0.5rem 0 6.5rem;
+  border-right: 1px solid transparent;
+}
+.location input {
+  height: fit-content;
+  border: none;
+  padding: 0.5rem;
+  background-color: #EAEAEA;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.location input:focus {
+  box-shadow: inset 0px 0px 8px -2px rgba(0, 0, 0, 0.4);
+  outline: none;
+  background: white;
+}
+
+.reservation {
+  background-color: #F6F6F6;
+  text-align: center;
+  border-top: 1px solid #F6F6F6;
+  border-bottom: 1px solid #F6F6F6;
+}
+.reservation__heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 38px 80px 0.75rem 64px;
+}
+.reservation p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+.btn--pink {
+  display: flex;
+  margin-top: 0.9375rem;
+  margin-left: 82px;
+  margin-right: 74px;
+  margin-bottom: 3.5rem;
+  font-weight: 500;
+  padding: 1rem 22px;
+  padding-top: 0.9375rem;
+  border-radius: 2rem;
+  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
+  box-shadow: 0 6px 8px 0px rgba(0, 0, 0, 0.2);
+}
+.btn--pink:hover {
+  box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.3);
+}
+
+.fonctionnement {
+  padding: 1.25rem;
+}
+.fonctionnement__heading {
+  padding-top: 1.75rem;
+  padding-bottom: 0.25rem;
+}
+.fonctionnement__btn {
+  display: flex;
+  flex-wrap: nowrap;
+  background: #F6F6F6;
+  height: 4.6rem;
+  width: 20.11rem;
+  margin: 1.5rem 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+}
+.fonctionnement__btn .number {
+  font-size: 0.875rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: -0.75rem;
+  margin-top: 1.75rem;
+  background: #9356DC;
+  border-radius: 50%;
+}
+.fonctionnement__btn:hover {
+  box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.12);
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.fonctionnement__btn:hover i {
+  color: #9356DC;
+}
+.fonctionnement i {
+  font-size: 1.3125rem;
+  padding-left: 1.375rem;
+  padding-top: 1.75rem;
+  padding-right: 0.85rem;
+  color: #7D7D7D;
+}
+.fonctionnement a {
+  font-weight: 500;
+  height: 100%;
+  padding-top: 1.875rem;
+  padding-left: 0.85rem;
+}
+
+.restaurants {
+  padding: 1.25rem;
+}
+.restaurants__heading {
+  padding-top: 3.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.restaurant-carte {
+  display: flex;
+  flex-direction: column;
+  width: 21rem;
+  margin-top: 1rem;
+  height: 15.625rem;
+  border-radius: 1.25rem;
+}
+.restaurant-carte img {
+  display: flex;
+  align-self: baseline;
+  width: 100%;
+  height: 10.75rem;
+  border-radius: 1.25rem;
+  object-fit: cover;
+  object-position: center;
+}
+.restaurant-carte__description {
+  width: 100%;
+  height: 4.75rem;
+  background: white;
+}
+.restaurant-carte .heading {
+  margin-top: 3rem;
+}
+.restaurant-carte .heart {
+  font-size: 24px;
 }
 
 /*# sourceMappingURL=main.css.map */
