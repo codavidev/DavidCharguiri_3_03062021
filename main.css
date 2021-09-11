@@ -18,23 +18,23 @@ header {
 }
 
 .logo {
-  height: 63px;
-  padding-bottom: 14px;
-  padding-top: 22px;
-}
-.logo img {
-  height: 30px;
-  width: 164px;
-  margin-left: 105px;
+  display: block;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.875rem;
+  color: black;
+  width: fit-content;
+  padding-bottom: 0.3125rem;
+  padding-top: 0.875rem;
+  margin-left: 6.5625rem;
   margin-right: auto;
 }
 
 .location {
-  height: 50px;
+  height: 3.125rem;
   padding-top: 0.5rem;
   display: flex;
   background-color: #EAEAEA;
-  box-shadow: inset 0px 4px 4px -4px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0.25rem 0.25rem -0.25rem rgba(0, 0, 0, 0.4);
 }
 .location i {
   padding: 0.5rem 0.5rem 0 6.5rem;
@@ -49,7 +49,7 @@ header {
   font-size: 1rem;
 }
 .location input:focus {
-  box-shadow: inset 0px 0px 8px -2px rgba(0, 0, 0, 0.4);
+  box-shadow: inset 0px 0px 0.5rem -2px rgba(0, 0, 0, 0.4);
   outline: none;
   background: white;
 }
@@ -75,18 +75,19 @@ header {
 .btn--pink {
   display: flex;
   margin-top: 0.9375rem;
-  margin-left: 82px;
+  margin-left: 5.125rem;
   margin-right: 74px;
   margin-bottom: 3.5rem;
   font-weight: 500;
-  padding: 1rem 22px;
+  color: white;
+  padding: 1rem 1.375rem;
   padding-top: 0.9375rem;
   border-radius: 2rem;
-  background: linear-gradient(176deg, #ff79da 0%, #9356dc 100%);
-  box-shadow: 0 6px 8px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0 6px 0.5rem 0px rgba(0, 0, 0, 0.2);
 }
 .btn--pink:hover {
-  box-shadow: 0 6px 12px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.875rem 1.75rem rgba(0, 0, 0, 0.25), 0 0.625rem 0.625rem rgba(0, 0, 0, 0.22);
 }
 
 .fonctionnement {
@@ -104,7 +105,7 @@ header {
   width: 20.11rem;
   margin: 1.5rem 0.75rem;
   border-radius: 1rem;
-  box-shadow: 0 4px 8px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
 }
 .fonctionnement__btn .number {
   font-size: 0.875rem;
@@ -120,7 +121,7 @@ header {
   border-radius: 50%;
 }
 .fonctionnement__btn:hover {
-  box-shadow: 0 4px 12px 4px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0.875rem 1.75rem rgba(0, 0, 0, 0.25), 0 0.625rem 0.625rem rgba(0, 0, 0, 0.22);
   background-color: rgba(147, 86, 220, 0.1);
 }
 .fonctionnement__btn:hover i {
@@ -142,39 +143,113 @@ header {
 
 .restaurants {
   padding: 1.25rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid transparent;
 }
 .restaurants__heading {
-  padding-top: 3.5rem;
-  padding-bottom: 0.5rem;
+  padding-top: 2.4em;
+  padding-bottom: 0.125em;
 }
 
 .restaurant-carte {
   display: flex;
   flex-direction: column;
-  width: 21rem;
-  margin-top: 1rem;
+  width: 20.9375rem;
+  margin-top: 1.1875rem;
   height: 15.625rem;
   border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
+  position: relative;
+}
+.restaurant-carte:hover {
+  box-shadow: 0 0.875rem 1.75rem rgba(0, 0, 0, 0.25), 0 0.625rem 0.625rem rgba(0, 0, 0, 0.22);
+}
+.restaurant-carte .nouveau {
+  position: absolute;
+  top: 0.8125rem;
+  right: 0.8125rem;
+  padding: 0.5em 0.75rem;
+  background: #99E2D0;
+  color: green;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 0.125rem;
 }
 .restaurant-carte img {
-  display: flex;
-  align-self: baseline;
   width: 100%;
-  height: 10.75rem;
-  border-radius: 1.25rem;
+  height: 10.875rem;
+  border-radius: 1rem 1rem 0 0;
   object-fit: cover;
-  object-position: center;
+  object-position: 100% 100%;
 }
 .restaurant-carte__description {
   width: 100%;
+  padding: 0.75rem;
   height: 4.75rem;
   background: white;
+  border-radius: 0 0 1rem 1rem;
 }
-.restaurant-carte .heading {
-  margin-top: 3rem;
+.restaurant-carte__heading {
+  font-size: 1.125rem;
+  padding: 0.25rem 0;
 }
-.restaurant-carte .heart {
+.restaurant-carte .byline {
+  font-size: 1.0625rem;
+}
+.restaurant-carte .heart, .restaurant-carte .fa-heart {
   font-size: 24px;
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.675rem;
+}
+.restaurant-carte .full-heart {
+  display: none;
+}
+.restaurant-carte .stroke-heart:hover {
+  display: none;
+}
+.restaurant-carte .stroke-heart:hover .full-heart:hover {
+  display: block;
+  background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
+  -webkit-background-clip: text;
+}
+
+#la-note img {
+  object-position: center 62%;
+}
+
+footer {
+  display: block;
+  background: #353535;
+  font-weight: 400;
+  color: white;
+  padding: 1.25rem 1.5rem;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+footer .logo {
+  font-size: 1.125rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+footer a {
+  color: white;
+  font-size: 1rem;
+  line-height: 168%;
+}
+footer .devenir-partenaire i, footer .proposer-restaurant i {
+  padding-right: 0.5rem;
+  font-size: 0.875rem;
+  align-self: center;
+}
+footer .devenir-partenaire i {
+  font-size: 0.75rem;
+  padding-right: 0.25rem;
 }
 
 /*# sourceMappingURL=main.css.map */

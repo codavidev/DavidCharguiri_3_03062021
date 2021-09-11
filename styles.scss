@@ -1,3 +1,9 @@
+$primaire: #9356DC;
+$secondaire: #FF79DA;
+$tertiaire: #99E2D0;
+$gradient: linear-gradient(176deg, $secondaire 0%, $primaire 100%);
+$shadow: 0 0.25rem 0.5rem 0.125rem rgba(0,0,0,0.12);
+$shadow-hover: 0 0.875rem 1.75rem rgba(0,0,0,0.25), 0 0.625rem 0.625rem rgba(0,0,0,0.22);
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -14,22 +20,22 @@ header {
     width: 100%;
 }
 .logo {
-    height: 63px;
-    padding-bottom: 14px;
-    padding-top: 22px;
-    img {
-        height: 30px;
-        width: 164px;
-        margin-left: 105px;
-        margin-right: auto;
-    }
+    display: block;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.875rem;
+    color: black;
+    width: fit-content;
+    padding-bottom: 0.3125rem;
+    padding-top: 0.875rem;
+    margin-left: 6.5625rem;
+    margin-right: auto;
 }
 .location {
-    height: 50px;
+    height: 3.125rem;
     padding-top: 0.5rem;
     display: flex;
     background-color: #EAEAEA;
-    box-shadow: inset 0px 4px 4px -4px rgb(0 0 0 / 40%);
+    box-shadow: inset 0px 0.25rem 0.25rem -0.25rem rgb(0 0 0 / 40%);
     i {
         padding: 0.5rem 0.5rem 0 6.5rem;
         border-right: 1px solid transparent;
@@ -42,7 +48,7 @@ header {
         font-weight: 500;
         font-size: 1rem;
         &:focus {
-            box-shadow: inset 0px 0px 8px -2px rgb(0 0 0 / 40%);
+            box-shadow: inset 0px 0px 0.5rem -2px rgb(0 0 0 / 40%);
             outline: none;
             background: white;
         }
@@ -68,17 +74,18 @@ header {
 .btn--pink {
     display: flex;
     margin-top: 0.9375rem;
-    margin-left: 82px;
+    margin-left: 5.125rem;
     margin-right: 74px;
     margin-bottom: 3.5rem;
     font-weight: 500;
-    padding: 1rem 22px;
+    color: white;
+    padding: 1rem 1.375rem;
     padding-top: 0.9375rem;
     border-radius: 2rem;
-    background: linear-gradient(176deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 100%);
-    box-shadow: 0 6px 8px 0px rgb(0 0 0 / 20%);
+    background: $gradient;
+    box-shadow: 0 6px 0.5rem 0px rgb(0 0 0 / 20%);
     &:hover {
-        box-shadow: 0 6px 12px 0px rgb(0 0 0 / 30%);
+        box-shadow: $shadow-hover;
     }
 }
 .fonctionnement {
@@ -95,7 +102,7 @@ header {
         width: 20.11rem;
         margin: 1.5rem 0.75rem;
         border-radius: 1rem;
-        box-shadow: 0 4px 8px 2px rgba(0,0,0,0.10);
+        box-shadow: $shadow;
         .number {
             font-size: 0.875rem;
             color: white;
@@ -106,14 +113,14 @@ header {
             height: 1.5rem;
             margin-left: -0.75rem;
             margin-top: 1.75rem;
-            background: #9356DC;
+            background: $primaire;
             border-radius: 50%;
         }
         &:hover {
-            box-shadow: 0 4px 12px 4px rgba(0,0,0,0.12);
+            box-shadow: $shadow-hover;
             background-color: rgba(147, 86, 220, 0.1);
             i {
-                color: #9356DC;
+                color: $primaire;
             }
         }
     }
@@ -134,36 +141,112 @@ header {
 }
 .restaurants {
     padding: 1.25rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid transparent;
     &__heading {
-        padding-top: 3.5rem;
-        padding-bottom: 0.5rem;
+        padding-top: 2.4em;
+        padding-bottom: 0.125em;
     }
 }
 .restaurant-carte {
     display: flex;
     flex-direction: column;
-    width: 21rem;
-    margin-top: 1rem;
+    width: 20.9375rem;
+    margin-top: 1.1875rem;
     height: 15.625rem;
     border-radius: 1.25rem;
+    box-shadow: $shadow;
+    position: relative;
+    &:hover {
+        box-shadow: $shadow-hover;
+    }
+    .nouveau {
+        position: absolute;
+        top: 0.8125rem;
+        right: 0.8125rem;
+        padding: 0.5em 0.75rem;
+        background: $tertiaire;
+        color: green;
+        font-weight: 500;
+        font-size: 0.875rem;
+        border-radius: 0.125rem;
+    }
     img {
-        display: flex;
-        align-self: baseline;
         width: 100%;
-        height: 10.75rem;
-        border-radius: 1.25rem;
+        height: 10.875rem;
+        border-radius: 1rem 1rem 0 0;
         object-fit: cover;
-        object-position: center;
+        object-position: 100% 100%;
     }
     &__description {
         width: 100%;
+        padding: 0.75rem;
         height: 4.75rem;
         background: white;
+        border-radius: 0 0 1rem 1rem;
     }
-    .heading {
-        margin-top: 3rem;
+    &__heading {
+        font-size: 1.125rem;
+        padding: 0.25rem 0;
     }
-    .heart {
+    .byline {
+        font-size: 1.0625rem;
+    }
+    .heart, .fa-heart {
         font-size: 24px;
+        position: absolute;
+        right: 1.5rem;
+        bottom: 1.675rem;
     }
+        .full-heart {
+            display: none;
+        }
+        .stroke-heart:hover {
+            display: none;
+            .full-heart:hover {
+            display: block;
+        background: $gradient;
+        -webkit-background-clip: text;
+        }
+        }   
+}
+#la-note img {
+    object-position: center 62%;
+}
+footer {
+    display: block;
+    background: #353535;
+    font-weight: 400;
+    color: white;
+    padding: 1.25rem 1.5rem;
+    nav {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.75rem;
+    }
+    .logo {
+        font-size: 1.125rem;
+        color: white;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 0.75rem;
+    }
+    a {
+        color: white;
+        font-size: 1rem;
+        line-height: 168%;
+    }
+    .devenir-partenaire, .proposer-restaurant {
+        
+        i {
+            padding-right: 0.5rem;
+            font-size: 0.875rem;
+            align-self: center;
+        }
+    }
+    .devenir-partenaire i {
+        font-size: 0.75rem;
+        padding-right: 0.25rem;
+    }
+    
 }
