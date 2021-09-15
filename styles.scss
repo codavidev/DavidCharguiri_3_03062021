@@ -1,9 +1,7 @@
-$primaire: #9356DC;
-$secondaire: #FF79DA;
-$tertiaire: #99E2D0;
-$gradient: linear-gradient(176deg, $secondaire 0%, $primaire 100%);
-$shadow: 0 0.25rem 0.5rem 0.125rem rgba(0,0,0,0.12);
-$shadow-hover: 0 0.875rem 1.75rem rgba(0,0,0,0.25), 0 0.625rem 0.625rem rgba(0,0,0,0.22);
+@import "_variables";
+@import "_functions";
+@import "_placeholders";
+
 * {
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
@@ -55,10 +53,10 @@ header {
     }
 }
 .reservation {
-    background-color: #F6F6F6;
+    background-color: $bggrey;
     text-align: center;
-    border-top: 1px solid #F6F6F6;
-    border-bottom: 1px solid #F6F6F6;
+    border-top: 1px solid $bggrey;
+    border-bottom: 1px solid $bggrey;
     &__heading {
         font-weight: 700;
         font-size: 1.5rem;
@@ -73,19 +71,20 @@ header {
 }
 .btn--pink {
     display: flex;
+    width: fit-content;
     margin-top: 0.9375rem;
     margin-left: 5.125rem;
-    margin-right: 74px;
     margin-bottom: 3.5rem;
     font-weight: 500;
-    color: white;
-    padding: 1rem 1.375rem;
-    padding-top: 0.9375rem;
     border-radius: 2rem;
     background: $gradient;
     box-shadow: 0 6px 0.5rem 0px rgb(0 0 0 / 20%);
     &:hover {
         box-shadow: $shadow-hover;
+    }
+    a {
+        padding:  0.9375rem 1.3125rem  1rem 1.375rem;
+        color: white;
     }
 }
 .fonctionnement {
@@ -97,7 +96,7 @@ header {
     &__btn {
         display: flex;
         flex-wrap: nowrap;
-        background: #F6F6F6;
+        background: $bggrey;
         height: 4.6rem;
         width: 20.11rem;
         margin: 1.5rem 0.75rem;
@@ -125,21 +124,28 @@ header {
         }
     }
     i {
-        font-size: 1.3125rem;
-        padding-left: 1.375rem;
-        padding-top: 1.75rem;
-        padding-right: 0.85rem;
+        display: inline;
+        text-align: center;
+        vertical-align: middle;
+        padding-left: 1.5em;
+        padding-top: 1.875rem;
+        padding-right: 0.875rem;
         color: #7D7D7D;
-        
+        &.fa-mobile-alt:before {
+            font-size: 1.25rem;
+        }
+        &.fa-store::before {
+            font-size: 1.125rem;
+        }
     }
     a {
         font-weight: 500;
         height: 100%;
         padding-top: 1.875rem;
-        padding-left: 0.85rem;
+        padding-left: 1.5em;
     }
 }
-.restaurants {
+#restaurants {
     padding: 1.25rem;
     padding-bottom: 4rem;
     border-bottom: 1px solid transparent;
@@ -179,11 +185,17 @@ header {
         object-position: 100% 100%;
     }
     &__description {
+        position: relative;
+        display: inline-flex;
         width: 100%;
         padding: 0.75rem;
         height: 4.75rem;
+        color: black;
         background: white;
         border-radius: 0 0 1rem 1rem;
+        .text-container {
+            width: fit-content;
+        }
     }
     &__heading {
         font-size: 1.125rem;
@@ -192,23 +204,21 @@ header {
     .byline {
         font-size: 1.0625rem;
     }
-    .heart, .fa-heart {
-        font-size: 24px;
+    .heart-stroke, .heart-solid {
+        width: 1.5rem;
+        height: 1.5rem;
         position: absolute;
         right: 1.5rem;
-        bottom: 1.675rem;
+        top: 1.5rem;
     }
-        .full-heart {
-            display: none;
-        }
-        .stroke-heart:hover {
-            display: none;
-            .full-heart:hover {
-            display: block;
-        background: $gradient;
-        -webkit-background-clip: text;
-        }
-        }   
+    .heart-solid {
+        // display: none;
+        background-color: $gradient;
+        background-size: cover;
+    }
+    // .heart-stroke {
+
+    // }
 }
 #la-note img {
     object-position: center 62%;
@@ -237,7 +247,6 @@ footer {
         line-height: 168%;
     }
     .devenir-partenaire, .proposer-restaurant {
-        
         i {
             padding-right: 0.5rem;
             font-size: 0.875rem;
@@ -248,5 +257,73 @@ footer {
         font-size: 0.75rem;
         padding-right: 0.25rem;
     }
+}
+// PAGES
+.resto__img {
+    background: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+        width: 100%;
+        height: 17.25rem;
+        background-size: cover;
+        background-position: center;
+}
+.resto__menu {
+    margin-top: -3.5rem;
+    width: 100%;
+    background: $bggrey;
+    border-radius: 2.5rem 2.5rem 0 0;
+}
+.resto__heading {
+    padding-top: 2rem;
+    padding-left: 1.25rem;
+    font-family: 'Shrikhand', cursive;
+    font-size: 1.75rem;
+}
+.menu__heading {
+    padding-top: 1.875rem;
+    padding-left: 1.25rem;
+    padding-bottom: 0.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+    &__underline {
+        background: $tertiaire;
+        height: 0.1875rem;
+        width: 2.5rem;
+        margin-left: 1.25rem;
+    }
+}
+.food-carte {
+    @extend %flex-between;
+    flex-direction: row;
+    background: white;
+    border-radius: 1rem;
+    width: 21.75rem;
+    height: 4.25rem;
+    margin: 0.875rem auto;
+    &__text {
+        width: 100%;
+        margin: toRem(12);
+    }
+    &__heading {
+        font-size: 1.125rem;
+        font-weight: 500;
+    }
+    &__description {
+        margin-top: toRem(6);
+        margin-right: 0.25rem;
+        font-size: toRem(15);
+        font-weight: 300;
+        width: 100%;
+        @extend %flex-between;
+        flex-direction: row;
     
+    }
+    &__price {
+        margin-right: toRem(10);
+        font-weight: 500;
+    }
+    &__add__btn {
+        width: 3.625rem;
+        background: $tertiaire;
+        border-radius: 0 1rem 1rem 0;
+    }
 }
