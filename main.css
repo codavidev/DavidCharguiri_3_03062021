@@ -1,6 +1,11 @@
-.food-carte__description, .food-carte {
+.food-carte, .resto__heading__container, .restaurant-carte__description {
   display: flex;
   justify-content: space-between;
+}
+
+.food-carte:hover, .restaurant-carte:hover, .fonctionnement__btn:hover, .btn--pink:hover {
+  box-shadow: 0 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.14), 0 0.25rem 0.25rem rgba(0, 0, 0, 0.13);
+  transition: 0.3s ease-in-out;
 }
 
 * {
@@ -19,19 +24,28 @@ body {
 }
 
 header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   width: 100%;
+  height: 3.9375rem;
+  padding: 0 1.5rem;
+  padding-top: 0.5rem;
+}
+
+.fa-arrow-left {
+  font-size: 1.25rem;
+  color: black;
 }
 
 .logo {
-  display: block;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.875rem;
   color: black;
-  width: fit-content;
-  padding-bottom: 0.3125rem;
-  padding-top: 0.875rem;
-  margin-left: 6.5625rem;
+  margin-left: auto;
   margin-right: auto;
+}
+.logo img {
+  display: flex;
+  width: 10.125rem;
 }
 
 .location {
@@ -86,10 +100,10 @@ header {
   font-weight: 500;
   border-radius: 2rem;
   background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
-  box-shadow: 0 6px 0.5rem 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
 }
 .btn--pink:hover {
-  box-shadow: 0 0.875rem 1.75rem rgba(0, 0, 0, 0.25), 0 0.625rem 0.625rem rgba(0, 0, 0, 0.22);
+  filter: opacity(85%);
 }
 .btn--pink a {
   padding: 0.9375rem 1.3125rem 1rem 1.375rem;
@@ -127,7 +141,6 @@ header {
   border-radius: 50%;
 }
 .fonctionnement__btn:hover {
-  box-shadow: 0 0.875rem 1.75rem rgba(0, 0, 0, 0.25), 0 0.625rem 0.625rem rgba(0, 0, 0, 0.22);
   background-color: rgba(147, 86, 220, 0.1);
 }
 .fonctionnement__btn:hover i {
@@ -175,9 +188,6 @@ header {
   box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
   position: relative;
 }
-.restaurant-carte:hover {
-  box-shadow: 0 0.875rem 1.75rem rgba(0, 0, 0, 0.25), 0 0.625rem 0.625rem rgba(0, 0, 0, 0.22);
-}
 .restaurant-carte .nouveau {
   position: absolute;
   top: 0.8125rem;
@@ -198,9 +208,7 @@ header {
 }
 .restaurant-carte__description {
   position: relative;
-  display: inline-flex;
   width: 100%;
-  padding: 0.75rem;
   height: 4.75rem;
   color: black;
   background: white;
@@ -208,6 +216,7 @@ header {
 }
 .restaurant-carte__description .text-container {
   width: fit-content;
+  padding: 0.75rem;
 }
 .restaurant-carte__heading {
   font-size: 1.125rem;
@@ -216,16 +225,42 @@ header {
 .restaurant-carte .byline {
   font-size: 1.0625rem;
 }
-.restaurant-carte .heart-stroke, .restaurant-carte .heart-solid {
-  width: 1.5rem;
-  height: 1.5rem;
+
+.fa-heart {
+  cursor: pointer;
+}
+
+.heart__container {
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.heart_empty, .heart_full {
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
 }
-.restaurant-carte .heart-solid {
-  background-color: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
-  background-size: cover;
+
+.heart__container:hover > .heart_full {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.heart__container:hover > .heart_empty {
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+  transform: scale(0.9);
+}
+
+.heart_full {
+  background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
+  background-clip: border-box;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 500ms;
+  transform: scale(0);
+  transform-origin: center;
 }
 
 #la-note img {
@@ -245,6 +280,7 @@ footer nav {
   margin-bottom: 0.75rem;
 }
 footer .logo {
+  font-family: "Shrikhand", cursive;
   font-size: 1.125rem;
   color: white;
   margin: 0;
@@ -266,8 +302,23 @@ footer .devenir-partenaire i {
   padding-right: 0.25rem;
 }
 
+.la-pallette {
+  background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.la-note {
+  background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.la-francaise {
+  background: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.le-delice {
+  background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
 .resto__img {
-  background: url("/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
   width: 100%;
   height: 17.25rem;
   background-size: cover;
@@ -275,35 +326,44 @@ footer .devenir-partenaire i {
 }
 
 .resto__menu {
+  position: relative;
   margin-top: -3.5rem;
+  padding-bottom: 1rem;
   width: 100%;
   background: #F6F6F6;
   border-radius: 2.5rem 2.5rem 0 0;
 }
 
 .resto__heading {
-  padding-top: 2rem;
-  padding-left: 1.25rem;
+  padding-top: 1.1875rem;
+  padding-left: 0.5rem;
   font-family: "Shrikhand", cursive;
   font-size: 1.75rem;
 }
+.resto__heading__container {
+  padding: 0.75rem;
+}
 
 .menu__heading {
-  padding-top: 1.875rem;
+  padding-top: 1.25rem;
   padding-left: 1.25rem;
-  padding-bottom: 0.25rem;
   font-size: 1rem;
   font-weight: 300;
 }
-.menu__heading__underline {
-  background: #99E2D0;
+.menu__heading:after {
+  margin-top: 0.25rem;
   height: 0.1875rem;
   width: 2.5rem;
-  margin-left: 1.25rem;
+  background: #99E2D0;
+  content: "";
+  display: block;
 }
 
 .food-carte {
+  cursor: pointer;
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
   flex-direction: row;
+  flex-wrap: nowrap;
   background: white;
   border-radius: 1rem;
   width: 21.75rem;
@@ -311,29 +371,76 @@ footer .devenir-partenaire i {
   margin: 0.875rem auto;
 }
 .food-carte__text {
-  width: 100%;
   margin: 0.75rem;
+  display: inline-flex;
+  flex-direction: column;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .food-carte__heading {
   font-size: 1.125rem;
   font-weight: 500;
+  display: inline-block;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis !important;
 }
 .food-carte__description {
   margin-top: 0.375rem;
-  margin-right: 0.25rem;
   font-size: 0.9375rem;
   font-weight: 300;
-  width: 100%;
-  flex-direction: row;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.food-carte .price-add {
+  display: flex;
+  position: relative;
+  width: fit-content;
 }
 .food-carte__price {
-  margin-right: 0.625rem;
+  padding-top: 2.375rem;
+  padding-left: 0.25rem;
+  padding-right: 1.25rem;
   font-weight: 500;
+  display: flex;
 }
 .food-carte__add__btn {
-  width: 3.625rem;
+  height: 100%;
+  width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
   background: #99E2D0;
   border-radius: 0 1rem 1rem 0;
+  transition: 0.4s 0s ease-in-out;
+}
+.food-carte__add__icon {
+  font-size: 1.25rem;
+  color: white;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+.food-carte:hover .food-carte__add__btn {
+  opacity: 1;
+  width: 3.625rem !important;
+}
+.food-carte:hover .food-carte__add__icon {
+  opacity: 1;
+  transform: rotateZ(360deg);
+}
+.commander {
+  margin-top: 3.1875rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 11.625rem;
+  display: flex;
+  justify-content: center;
 }
 
 /*# sourceMappingURL=main.css.map */
