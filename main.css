@@ -8,6 +8,35 @@
   transition: 0.3s ease-in-out;
 }
 
+@keyframes scale {
+  to {
+    transform: scaleX(1.05);
+    color: black;
+  }
+}
+@keyframes loader-disparation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    height: 25%;
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+    padding: 1.25rem;
+  }
+}
+@keyframes progressive-appear {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
 * {
   font-family: "Roboto", sans-serif;
   box-sizing: border-box;
@@ -15,12 +44,63 @@
   padding: 0;
 }
 
-a {
-  text-decoration: none;
+body {
+  width: 100%;
 }
 
-body {
-  width: 375px;
+a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  font-size: 2rem;
+  width: 100%;
+  height: 100%;
+  background: #f6f6f6;
+  text-align: center;
+  padding-top: 50vh;
+  animation: loader-disparation 0.5s 3s ease-out forwards;
+}
+.loader span {
+  font-family: "Shrikhand", cursive;
+  display: inline-block;
+  width: fit-content;
+  animation: scale 1s infinite;
+  color: grey;
+  margin: -0.125em;
+}
+.loader .o {
+  animation-delay: 0.3s;
+}
+.loader .h {
+  animation-delay: 0.4s;
+}
+.loader .m {
+  animation-delay: 0.5s;
+}
+.loader .y {
+  animation-delay: 0.6s;
+}
+.loader .f {
+  animation-delay: 0.7s;
+}
+.loader .o2 {
+  animation-delay: 0.8s;
+}
+.loader .o3 {
+  animation-delay: 0.9s;
+}
+.loader .d {
+  animation-delay: 1s;
+}
+.loader .chargement {
+  font-size: medium;
+  color: grey;
+  margin: -0.5rem;
 }
 
 header {
@@ -49,21 +129,24 @@ header {
 }
 
 .location {
+  width: 100%;
   height: 3.125rem;
-  padding-top: 0.5rem;
   display: flex;
-  background-color: #EAEAEA;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
   box-shadow: inset 0px 0.25rem 0.25rem -0.25rem rgba(0, 0, 0, 0.4);
 }
 .location i {
-  padding: 0.5rem 0.5rem 0 6.5rem;
+  padding: 0 0.5rem;
+  margin-left: 1.875rem;
   border-right: 1px solid transparent;
 }
 .location input {
   height: fit-content;
   border: none;
   padding: 0.5rem;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   font-weight: 500;
   font-size: 1rem;
 }
@@ -116,13 +199,14 @@ header {
 .fonctionnement__heading {
   padding-top: 1.75rem;
   padding-bottom: 0.25rem;
+  padding-right: 0.25rem;
 }
 .fonctionnement__btn {
   display: flex;
-  flex-wrap: nowrap;
+  white-space: nowrap;
   background: #F6F6F6;
   height: 4.6rem;
-  width: 20.11rem;
+  min-width: 20.11rem;
   margin: 1.5rem 0.75rem;
   border-radius: 1rem;
   box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
@@ -153,7 +237,7 @@ header {
   padding-left: 1.5em;
   padding-top: 1.875rem;
   padding-right: 0.875rem;
-  color: #7D7D7D;
+  color: #7d7d7d;
 }
 .fonctionnement i.fa-mobile-alt:before {
   font-size: 1.25rem;
@@ -235,7 +319,8 @@ header {
   font-size: 1.5rem;
 }
 
-.heart_empty, .heart_full {
+.heart_empty,
+.heart_full {
   position: absolute;
   right: 1.5rem;
   top: 1.5rem;
@@ -292,7 +377,8 @@ footer a {
   font-size: 1rem;
   line-height: 168%;
 }
-footer .devenir-partenaire i, footer .proposer-restaurant i {
+footer .devenir-partenaire i,
+footer .proposer-restaurant i {
   padding-right: 0.5rem;
   font-size: 0.875rem;
   align-self: center;
@@ -367,11 +453,26 @@ footer .devenir-partenaire i {
   background: white;
   border-radius: 1rem;
   width: 21.75rem;
-  height: 4.25rem;
+  height: fit-content;
   margin: 0.875rem auto;
+  opacity: 0;
+  animation: progressive-appear 1.6s forwards;
+}
+.food-carte:nth-child(2) {
+  animation-delay: 3.8s;
+}
+.food-carte:nth-child(3) {
+  animation-delay: 4.2s;
+}
+.food-carte:nth-child(4) {
+  animation-delay: 4.6s;
+}
+.food-carte:nth-child(5) {
+  animation-delay: 5s;
 }
 .food-carte__text {
   margin: 0.75rem;
+  margin-right: 0.375rem;
   display: inline-flex;
   flex-direction: column;
   white-space: nowrap;
@@ -382,11 +483,15 @@ footer .devenir-partenaire i {
   font-size: 1.125rem;
   font-weight: 500;
   display: inline-block;
-  flex-wrap: nowrap;
-  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
-  word-break: break-all;
-  text-overflow: ellipsis !important;
+  white-space: nowrap;
+}
+.food-carte:hover .food-carte__heading {
+  display: inline-block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .food-carte__description {
   margin-top: 0.375rem;
@@ -403,11 +508,13 @@ footer .devenir-partenaire i {
   width: fit-content;
 }
 .food-carte__price {
-  padding-top: 2.375rem;
+  padding-bottom: 0.75rem;
   padding-left: 0.25rem;
   padding-right: 1.25rem;
   font-weight: 500;
   display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 .food-carte__add__btn {
   height: 100%;
@@ -418,7 +525,7 @@ footer .devenir-partenaire i {
   flex-wrap: nowrap;
   background: #99E2D0;
   border-radius: 0 1rem 1rem 0;
-  transition: 0.4s 0s ease-in-out;
+  transition: 0.4s ease-in-out;
 }
 .food-carte__add__icon {
   font-size: 1.25rem;
@@ -441,6 +548,103 @@ footer .devenir-partenaire i {
   width: 11.625rem;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (min-width: 376px) {
+  .btn--pink {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .location {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+  .location i {
+    padding: 0;
+    padding-right: 0.5rem;
+  }
+
+  .fonctionnement {
+    width: 100%;
+  }
+  .fonctionnement__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .restaurant-carte-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .restaurant-carte {
+    margin: 14px;
+  }
+
+  .menu__heading {
+    width: 100%;
+  }
+
+  .food-sections-container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .fonctionnement {
+    width: 100%;
+  }
+  .fonctionnement__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .fonctionnement__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .food-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .fonctionnement, #restaurants, footer nav {
+    width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .restaurant-carte-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+
+  .fonctionnement__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .food-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

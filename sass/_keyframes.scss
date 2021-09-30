@@ -1,0 +1,30 @@
+// loader
+@keyframes scale {
+    to {
+        transform: scaleX(1.05);
+        color: black;
+    }
+}
+@keyframes loader-disparation {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 1;
+        height: 25%;
+    }
+    100% {
+        opacity: 0;
+        height: 0;
+        padding: 1.25rem;
+    }
+}
+@keyframes progressive-appear {
+    0% {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    100% {
+        opacity: 1;
+    }
+}
