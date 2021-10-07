@@ -1,0 +1,66 @@
+.restaurant-carte {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 20.9375rem;
+    min-height: 15.625rem;
+    margin: toRem(9);
+    border-radius: 1.25rem;
+    box-shadow: $shadow;
+    position: relative;
+    @include mobile-only {
+       aspect-ratio: 335/250;
+        margin: 2.4%;
+        width: 100%;
+        height: auto;
+    }
+    @include tablet {
+        width: 45%;
+    }
+    &:hover {
+        @extend %shadow-hover;
+    }
+    .nouveau {
+        position: absolute;
+        top: 0.8125rem;
+        right: 0.8125rem;
+        padding: 0.5em 0.75rem;
+        background: $tertiaire;
+        color: green;
+        font-weight: 500;
+        font-size: 0.875rem;
+        border-radius: 0.125rem;
+    }
+    img {
+        aspect-ratio: 335/174;
+        width: 100%;
+        height: 85%;
+        // height: 10.875rem;
+        border-radius: 1rem 1rem 0 0;
+        object-fit: cover;
+        object-position: 100% 100%;
+    }
+    &__description {
+        position: relative;
+        @extend %flex-between;
+        width: 100%;
+        height: 4.75rem;
+        color: black;
+        background: white;
+        border-radius: 0 0 1rem 1rem;
+        .text-container {
+            width: fit-content;
+            padding: 0.75rem;
+        }
+    }
+    &__heading {
+        font-size: 1.125rem;
+        padding: 0.25rem 0;
+    }
+    .byline {
+        font-size: 1.0625rem;
+    }
+}
+#la-note img {
+    object-position: center 62%;
+}

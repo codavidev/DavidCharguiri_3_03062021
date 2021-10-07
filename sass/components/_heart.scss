@@ -1,0 +1,32 @@
+.fa-heart {
+    cursor: pointer;
+}
+.heart__container {
+    position: relative;
+    font-size: 1.5rem;
+}
+.heart_empty,
+.heart_full {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+}
+.heart__container:hover > .heart_full {
+    opacity: 1;
+    transform: scale(1);
+}
+.heart__container:hover > .heart_empty {
+    opacity: 0;
+    transition: all 400ms ease-in-out;
+    transform: scale(0.9);
+}
+.heart_full {
+    background: $gradient;
+    background-clip: border-box;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    opacity: 0;
+    transition: all 500ms;
+    transform: scale(0);
+    transform-origin: center;
+}

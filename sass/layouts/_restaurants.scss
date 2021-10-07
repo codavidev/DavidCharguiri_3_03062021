@@ -1,0 +1,17 @@
+#restaurants {
+    width: 100%;
+    padding-top: 2rem;
+    padding-left: toRem(11);
+    padding-right: toRem(11);
+    padding-bottom: toRem(59);
+    &__heading {
+        padding-top: 2.4em;
+        padding-left: toRem(9);
+        padding-bottom: toRem(13);
+    }
+}
+.restaurant-carte-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}

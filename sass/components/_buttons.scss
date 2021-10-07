@@ -1,0 +1,39 @@
+.btn--pink {
+    display: flex;
+    width: fit-content;
+    width: -moz-max-content;
+    
+    margin-top: 0.9375rem;
+    margin-left: 5.125rem;
+    margin-bottom: 3.5rem;
+    font-weight: 500;
+    border-radius: 2rem;
+    background: $gradient;
+    box-shadow: $shadow;
+    @include mobile-only {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    &:hover {
+        @extend %shadow-hover;
+        filter: opacity(85%);
+    }
+    a {
+        padding: 0.9375rem 1.3125rem 1rem 1.375rem;
+        color: white;
+    }
+}
+.commander {
+    margin-top: toRem(52)!important;
+    margin-left: auto !important;
+    margin-right: auto;
+    width: fit-content;
+    width: -moz-max-content;
+    
+    a {
+        display: flex;
+        justify-content: center;
+        width: toRem(186);
+        height: toRem(51);
+    }
+}

@@ -1,11 +1,33 @@
-.food-carte, .resto__heading__container, .restaurant-carte__description {
+.resto__heading__container, .food-carte, .restaurant-carte__description {
   display: flex;
   justify-content: space-between;
 }
 
-.food-carte:hover, .restaurant-carte:hover, .fonctionnement__btn:hover, .btn--pink:hover {
+.fonctionnement__btn:hover, .food-carte:hover, .restaurant-carte:hover, .btn--pink:hover {
   box-shadow: 0 0.25rem 0.5rem 0.25rem rgba(0, 0, 0, 0.14), 0 0.25rem 0.25rem rgba(0, 0, 0, 0.13);
   transition: 0.3s ease-in-out;
+}
+
+* {
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  width: fit-content;
+}
+
+.fonctionnement, #restaurants, footer nav, .resto__menu {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @keyframes scale {
@@ -38,22 +60,6 @@
     opacity: 1;
   }
 }
-* {
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  width: 100%;
-}
-
-a {
-  text-decoration: none;
-  width: fit-content;
-}
-
 .loader {
   position: fixed;
   top: 0;
@@ -104,21 +110,6 @@ a {
   margin: -0.5rem;
 }
 
-header {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 3.9375rem;
-  padding: 0 1.5rem;
-  padding-top: 0.5rem;
-}
-
-.fa-arrow-left {
-  font-size: 1.25rem;
-  color: black;
-}
-
 .logo {
   color: black;
   margin-left: auto;
@@ -127,188 +118,6 @@ header {
 .logo img {
   display: flex;
   width: 10.125rem;
-}
-
-.location {
-  width: 100%;
-  height: 3.125rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eaeaea;
-  box-shadow: inset 0px 0.25rem 0.25rem -0.25rem rgba(0, 0, 0, 0.4);
-}
-.location i {
-  padding: 0 0.5rem;
-  margin-left: 1.875rem;
-  border-right: 1px solid transparent;
-}
-.location input {
-  height: fit-content;
-  border: none;
-  padding: 0.5rem;
-  background-color: #eaeaea;
-  font-weight: 500;
-  font-size: 1rem;
-}
-.location input:focus {
-  box-shadow: inset 0px 0px 0.5rem -2px rgba(0, 0, 0, 0.4);
-  outline: none;
-  background: white;
-}
-
-.reservation {
-  background-color: #F6F6F6;
-  text-align: center;
-  border-top: 1px solid #F6F6F6;
-  border-bottom: 1px solid #F6F6F6;
-}
-.reservation__heading {
-  font-weight: 700;
-  font-size: 1.5rem;
-  padding: 38px 80px 0.75rem 64px;
-}
-.reservation p {
-  font-weight: 300;
-  font-size: 1.125rem;
-  padding-left: 0.5rem;
-  padding-bottom: 1rem;
-}
-
-.btn--pink {
-  display: flex;
-  width: fit-content;
-  margin-top: 0.9375rem;
-  margin-left: 5.125rem;
-  margin-bottom: 3.5rem;
-  font-weight: 500;
-  border-radius: 2rem;
-  background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
-  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
-}
-.btn--pink:hover {
-  filter: opacity(85%);
-}
-.btn--pink a {
-  padding: 0.9375rem 1.3125rem 1rem 1.375rem;
-  color: white;
-}
-
-.fonctionnement {
-  padding: 1.25rem;
-}
-.fonctionnement__heading {
-  padding-top: 1.75rem;
-  padding-bottom: 0.25rem;
-  padding-right: 0.25rem;
-}
-.fonctionnement__btn {
-  display: flex;
-  white-space: nowrap;
-  background: #F6F6F6;
-  height: 4.6rem;
-  min-width: 20.11rem;
-  margin: 1.5rem 0.75rem;
-  border-radius: 1rem;
-  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
-}
-.fonctionnement__btn .number {
-  font-size: 0.875rem;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: -0.75rem;
-  margin-top: 1.75rem;
-  background: #9356DC;
-  border-radius: 50%;
-}
-.fonctionnement__btn:hover {
-  background-color: rgba(147, 86, 220, 0.1);
-}
-.fonctionnement__btn:hover i {
-  color: #9356DC;
-}
-.fonctionnement i {
-  display: inline;
-  text-align: center;
-  vertical-align: middle;
-  padding-left: 1.5em;
-  padding-top: 1.875rem;
-  padding-right: 0.875rem;
-  color: #7d7d7d;
-}
-.fonctionnement i.fa-mobile-alt:before {
-  font-size: 1.25rem;
-}
-.fonctionnement i.fa-store::before {
-  font-size: 1.125rem;
-}
-.fonctionnement a {
-  font-weight: 500;
-  height: 100%;
-  padding-top: 1.875rem;
-  padding-left: 1.5em;
-}
-
-#restaurants {
-  padding: 1.25rem;
-  padding-bottom: 4rem;
-  border-bottom: 1px solid transparent;
-}
-#restaurants__heading {
-  padding-top: 2.4em;
-  padding-bottom: 0.125em;
-}
-
-.restaurant-carte {
-  display: flex;
-  flex-direction: column;
-  width: 20.9375rem;
-  margin-top: 1.1875rem;
-  height: 15.625rem;
-  border-radius: 1.25rem;
-  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
-  position: relative;
-}
-.restaurant-carte .nouveau {
-  position: absolute;
-  top: 0.8125rem;
-  right: 0.8125rem;
-  padding: 0.5em 0.75rem;
-  background: #99E2D0;
-  color: green;
-  font-weight: 500;
-  font-size: 0.875rem;
-  border-radius: 0.125rem;
-}
-.restaurant-carte img {
-  width: 100%;
-  height: 10.875rem;
-  border-radius: 1rem 1rem 0 0;
-  object-fit: cover;
-  object-position: 100% 100%;
-}
-.restaurant-carte__description {
-  position: relative;
-  width: 100%;
-  height: 4.75rem;
-  color: black;
-  background: white;
-  border-radius: 0 0 1rem 1rem;
-}
-.restaurant-carte__description .text-container {
-  width: fit-content;
-  padding: 0.75rem;
-}
-.restaurant-carte__heading {
-  font-size: 1.125rem;
-  padding: 0.25rem 0;
-}
-.restaurant-carte .byline {
-  font-size: 1.0625rem;
 }
 
 .fa-heart {
@@ -349,101 +158,111 @@ header {
   transform-origin: center;
 }
 
-#la-note img {
-  object-position: center 62%;
+.btn--pink {
+  display: flex;
+  width: fit-content;
+  width: -moz-max-content;
+  margin-top: 0.9375rem;
+  margin-left: 5.125rem;
+  margin-bottom: 3.5rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  background: linear-gradient(176deg, #FF79DA 0%, #9356DC 100%);
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
+}
+@media screen and (min-width: 376px) {
+  .btn--pink {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.btn--pink:hover {
+  filter: opacity(85%);
+}
+.btn--pink a {
+  padding: 0.9375rem 1.3125rem 1rem 1.375rem;
+  color: white;
 }
 
-footer {
-  display: block;
-  background: #353535;
-  font-weight: 400;
-  color: white;
-  padding: 1.25rem 1.5rem;
+.commander {
+  margin-top: 3.25rem !important;
+  margin-left: auto !important;
+  margin-right: auto;
+  width: fit-content;
+  width: -moz-max-content;
 }
-footer nav {
+.commander a {
+  display: flex;
+  justify-content: center;
+  width: 11.625rem;
+  height: 3.1875rem;
+}
+
+.restaurant-carte {
   display: flex;
   flex-direction: column;
-  margin-bottom: 0.75rem;
-}
-footer .logo {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.125rem;
-  color: white;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 0.75rem;
-}
-footer a {
-  color: white;
-  font-size: 1rem;
-  line-height: 168%;
-}
-footer .devenir-partenaire i,
-footer .proposer-restaurant i {
-  padding-right: 0.5rem;
-  font-size: 0.875rem;
-  align-self: center;
-}
-footer .devenir-partenaire i {
-  font-size: 0.75rem;
-  padding-right: 0.25rem;
-}
-
-.la-pallette {
-  background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
-}
-
-.la-note {
-  background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
-}
-
-.la-francaise {
-  background: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
-}
-
-.le-delice {
-  background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
-}
-
-.resto__img {
-  width: 100%;
-  height: 17.25rem;
-  background-size: cover;
-  background-position: center;
-}
-
-.resto__menu {
+  justify-content: space-between;
+  min-width: 20.9375rem;
+  min-height: 15.625rem;
+  margin: 0.5625rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
   position: relative;
-  margin-top: -3.5rem;
-  padding-bottom: 1rem;
+}
+@media screen and (min-width: 376px) {
+  .restaurant-carte {
+    aspect-ratio: 335/250;
+    margin: 2.4%;
+    width: 100%;
+    height: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .restaurant-carte {
+    width: 45%;
+  }
+}
+.restaurant-carte .nouveau {
+  position: absolute;
+  top: 0.8125rem;
+  right: 0.8125rem;
+  padding: 0.5em 0.75rem;
+  background: #99E2D0;
+  color: green;
+  font-weight: 500;
+  font-size: 0.875rem;
+  border-radius: 0.125rem;
+}
+.restaurant-carte img {
+  aspect-ratio: 335/174;
   width: 100%;
-  background: #F6F6F6;
-  border-radius: 2.5rem 2.5rem 0 0;
+  height: 85%;
+  border-radius: 1rem 1rem 0 0;
+  object-fit: cover;
+  object-position: 100% 100%;
 }
-
-.resto__heading {
-  padding-top: 1.1875rem;
-  padding-left: 0.5rem;
-  font-family: "Shrikhand", cursive;
-  font-size: 1.75rem;
+.restaurant-carte__description {
+  position: relative;
+  width: 100%;
+  height: 4.75rem;
+  color: black;
+  background: white;
+  border-radius: 0 0 1rem 1rem;
 }
-.resto__heading__container {
+.restaurant-carte__description .text-container {
+  width: fit-content;
   padding: 0.75rem;
 }
-
-.menu__heading {
-  padding-top: 1.25rem;
-  padding-left: 1.25rem;
-  font-size: 1rem;
-  font-weight: 300;
+.restaurant-carte__heading {
+  font-size: 1.125rem;
+  padding: 0.25rem 0;
 }
-.menu__heading:after {
-  margin-top: 0.25rem;
-  height: 0.1875rem;
-  width: 2.5rem;
-  background: #99E2D0;
-  content: "";
-  display: block;
+.restaurant-carte .byline {
+  font-size: 1.0625rem;
+}
+
+#la-note img {
+  object-position: center 62%;
 }
 
 .food-carte {
@@ -453,23 +272,41 @@ footer .devenir-partenaire i {
   flex-wrap: nowrap;
   background: white;
   border-radius: 1rem;
-  width: 21.75rem;
-  height: fit-content;
-  margin: 0.875rem auto;
+  min-width: 21.75rem;
+  height: 4.25rem;
+  margin: 0.875rem;
   opacity: 0;
   animation: progressive-appear 1.6s forwards;
 }
+@media screen and (min-width: 768px) {
+  .food-carte {
+    flex: 2;
+    max-width: 47%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .food-carte {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .food-carte:nth-child(2) {
-  animation-delay: 3.8s;
+  animation-delay: 0.4s;
 }
 .food-carte:nth-child(3) {
-  animation-delay: 4.2s;
+  animation-delay: 0.8s;
 }
 .food-carte:nth-child(4) {
-  animation-delay: 4.6s;
+  animation-delay: 1.2s;
 }
 .food-carte:nth-child(5) {
-  animation-delay: 5s;
+  animation-delay: 1.6s;
+}
+@media screen and (min-width: 1128px) {
+  .food-carte:nth-child(5) {
+    flex: 3;
+    max-width: calc(100%/3 - 28px );
+  }
 }
 .food-carte__text {
   margin: 0.75rem;
@@ -542,110 +379,290 @@ footer .devenir-partenaire i {
   opacity: 1;
   transform: rotateZ(360deg);
 }
-.commander {
-  margin-top: 3.1875rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 11.625rem;
-  display: flex;
-  justify-content: center;
+.fa-arrow-left {
+  font-size: 1.25rem;
+  color: black;
 }
 
-@media screen and (min-width: 376px) {
-  .btn--pink {
-    margin-left: auto;
-    margin-right: auto;
-  }
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 3.9375rem;
+  padding: 0 1.5rem;
+  padding-top: 0.5rem;
+}
 
+.location {
+  width: 100%;
+  height: 3.125rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eaeaea;
+  box-shadow: inset 0px 0.25rem 0.25rem -0.25rem rgba(0, 0, 0, 0.4);
+}
+@media screen and (min-width: 376px) {
   .location {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     padding: 0;
   }
+}
+.location i {
+  padding: 0 0.5rem;
+  margin-left: 1.875rem;
+  border-right: 1px solid transparent;
+}
+@media screen and (min-width: 376px) {
   .location i {
     padding: 0;
     padding-right: 0.5rem;
   }
+}
+.location input {
+  height: fit-content;
+  border: none;
+  padding: 0.5rem;
+  background-color: #eaeaea;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.location input:focus {
+  box-shadow: inset 0px 0px 0.5rem -2px rgba(0, 0, 0, 0.4);
+  outline: none;
+  background: white;
+}
 
-  .fonctionnement {
-    width: 100%;
-  }
-  .fonctionnement__container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-  }
+.reservation {
+  background-color: #F6F6F6;
+  text-align: center;
+  border-top: 1px solid #F6F6F6;
+  border-bottom: 1px solid #F6F6F6;
+}
+.reservation__heading {
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 38px 80px 0.75rem 64px;
+}
+.reservation p {
+  font-weight: 300;
+  font-size: 1.125rem;
+  padding-left: 0.5rem;
+  padding-bottom: 1rem;
+}
 
-  .restaurant-carte-container {
-    width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .restaurant-carte {
-    margin: 14px;
-  }
-
-  .menu__heading {
-    width: 100%;
-  }
-
-  .food-sections-container {
-    width: 100%;
+.fonctionnement {
+  padding: 1.25rem;
+  padding-right: 0.5rem;
+}
+.fonctionnement__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.fonctionnement__heading {
+  padding-top: 1.75rem;
+  padding-bottom: 1rem;
+  padding-right: 0.25rem;
+}
+.fonctionnement__btn {
+  display: flex;
+  white-space: nowrap;
+  background: #F6F6F6;
+  height: 4.6rem;
+  width: 20.11rem;
+  min-width: fit-content;
+  margin: 0.75rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.25rem 0.5rem 0.125rem rgba(0, 0, 0, 0.12);
+}
+@media screen and (min-width: 376px) {
+  .fonctionnement__btn {
+    width: 96%;
+    flex: 3;
   }
 }
 @media screen and (min-width: 768px) {
-  .fonctionnement {
+  .fonctionnement__btn {
+    flex: 3;
+    min-width: fit-content;
+    margin: calc(1.25rem/2) calc((10% - 2.5rem)/3);
+  }
+}
+.fonctionnement__btn .number {
+  font-size: 0.875rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: -0.75rem;
+  margin-top: 1.75rem;
+  background: #9356DC;
+  border-radius: 50%;
+}
+.fonctionnement__btn:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.fonctionnement__btn:hover i {
+  color: #9356DC;
+}
+.fonctionnement i {
+  display: inline;
+  text-align: center;
+  vertical-align: middle;
+  padding-left: 1.5em;
+  padding-top: 1.875rem;
+  padding-right: 0.875rem;
+  color: #7d7d7d;
+}
+.fonctionnement i.fa-mobile-alt:before {
+  font-size: 1.25rem;
+}
+.fonctionnement i.fa-store::before {
+  font-size: 1.125rem;
+}
+.fonctionnement__text {
+  font-weight: 500;
+  height: 100%;
+  padding-top: 1.875rem;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+#restaurants {
+  width: 100%;
+  padding-top: 2rem;
+  padding-left: 0.6875rem;
+  padding-right: 0.6875rem;
+  padding-bottom: 3.6875rem;
+}
+#restaurants__heading {
+  padding-top: 2.4em;
+  padding-left: 0.5625rem;
+  padding-bottom: 0.8125rem;
+}
+
+.restaurant-carte-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+footer {
+  display: block;
+  background: #353535;
+  font-weight: 400;
+  color: white;
+  padding: 1.25rem 1.5rem;
+}
+footer nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+}
+footer .logo {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.125rem;
+  color: white;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 0.75rem;
+}
+footer a {
+  color: white;
+  font-size: 1rem;
+  line-height: 168%;
+}
+footer .devenir-partenaire i,
+footer .proposer-restaurant i {
+  padding-right: 0.5rem;
+  font-size: 0.875rem;
+  align-self: center;
+}
+footer .devenir-partenaire i {
+  font-size: 0.75rem;
+  padding-right: 0.25rem;
+}
+
+.la-pallette {
+  background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+
+.la-note {
+  background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+
+.la-francaise {
+  background: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+
+.le-delice {
+  background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+
+.resto__img {
+  width: 100%;
+  height: 17.25rem;
+  background-size: cover;
+  background-position: center 66%;
+}
+
+.resto__menu {
+  position: relative;
+  margin-top: -3.5rem;
+  padding-bottom: 1rem;
+  width: 100%;
+  background: #F6F6F6;
+  border-radius: 2.5rem 2.5rem 0 0;
+}
+
+.resto__heading {
+  padding-top: 1.1875rem;
+  padding-left: 0.5rem;
+  font-family: "Shrikhand", cursive;
+  font-size: 1.75rem;
+}
+.resto__heading__container {
+  padding: 0.75rem;
+}
+
+.menu__heading {
+  padding-top: 1.25rem;
+  padding-left: 1.25rem;
+  font-size: 1rem;
+  font-weight: 300;
+}
+@media screen and (min-width: 376px) {
+  .menu__heading {
     width: 100%;
   }
-  .fonctionnement__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-  }
 }
-@media screen and (min-width: 1024px) {
-  .fonctionnement__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
-  }
+.menu__heading:after {
+  margin-top: 0.25rem;
+  height: 0.1875rem;
+  width: 2.5rem;
+  background: #99E2D0;
+  content: "";
+  display: block;
+}
 
+.food-container {
+  margin-bottom: 1.75rem;
+}
+@media screen and (min-width: 768px) {
   .food-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-@media screen and (min-width: 1440px) {
-  .fonctionnement, #restaurants, footer nav {
-    width: 1440px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
-  .restaurant-carte-container {
-    flex-direction: row;
-    flex-wrap: nowrap;
-  }
-
-  .fonctionnement__container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
-  .food-container {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-  }
+.fonctionnement, #restaurants, footer nav, .resto__menu {
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,115 @@
+.food-carte {
+    cursor: pointer;
+    @extend %flex-between;
+    box-shadow: $shadow;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: white;
+    border-radius: 1rem;
+    min-width: 21.75rem;
+    height: 4.25rem;
+    margin: toRem(14);
+    opacity: 0;
+    animation: progressive-appear 1.6s forwards;
+    @include tablet {
+        flex: 2;
+        max-width: 47%;
+    }
+    @include desktop {
+        display: flex;
+        flex-direction: row;
+    }
+    &:nth-child(2) {
+        animation-delay: .4s;
+    }
+    &:nth-child(3) {
+        animation-delay: .8s;
+    }
+    &:nth-child(4) {
+        animation-delay: 1.2s;
+    }
+    &:nth-child(5) {
+        animation-delay: 1.6s;
+        @include laptop-2 {
+            flex: 3;
+            max-width: calc(100%/3 - 28px );
+        }
+    }
+    &__text {
+        margin: toRem(12);
+        margin-right: toRem(6);
+        display: inline-flex;
+        flex-direction: column;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    &__heading {
+        font-size: 1.125rem;
+        font-weight: 500;
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &:hover .food-carte__heading {
+        display: inline-block;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+    &__description {
+        margin-top: toRem(6);
+        font-size: toRem(15);
+        font-weight: 300;
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .price-add {
+        display: flex;
+        position: relative;
+        width: fit-content;
+    }
+    &__price {
+        padding-bottom: toRem(12);
+        padding-left: toRem(4);
+        padding-right: toRem(20);
+        font-weight: 500;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    &__add__btn {
+        height: 100%;
+        width: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        background: $tertiaire;
+        border-radius: 0 1rem 1rem 0;
+        transition: 0.4s ease-in-out;
+    }
+    &__add__icon {
+        font-size: toRem(20);
+        color: white;
+        opacity: 0;
+        transition: 0.4s ease-in-out;
+    }
+    &:hover .food-carte__add__btn {
+        opacity: 1;
+        width: 3.625rem !important;
+    }
+    &:hover .food-carte__add__icon {
+        opacity: 1;
+        transform: rotateZ(360deg);
+    }
+    &:hover {
+        @extend %shadow-hover;
+    }
+    &:hover {
+        @extend %shadow-hover;
+    }
+}

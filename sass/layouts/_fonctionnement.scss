@@ -1,0 +1,76 @@
+.fonctionnement {
+    padding: 1.25rem;
+    padding-right: 0.5rem;
+    &__container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    &__heading {
+        padding-top: 1.75rem;
+        padding-bottom: 1rem;
+        padding-right: 0.25rem;
+    }
+    &__btn {
+        display: flex;
+        white-space: nowrap;
+        background: $bggrey;
+        height: 4.6rem;
+        width: 20.11rem;
+        min-width: fit-content;
+        margin: 0.75rem;
+        border-radius: 1rem;
+        box-shadow: $shadow;
+        @include mobile-only {
+            width: 96%;
+            flex: 3;
+        }
+        @include tablet {
+            flex: 3;
+            min-width: fit-content;
+            margin: calc(1.25rem/2) calc((10% - 2.5rem)/3);
+        }
+        .number {
+            font-size: 0.875rem;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-left: -0.75rem;
+            margin-top: 1.75rem;
+            background: $primaire;
+            border-radius: 50%;
+        }
+        &:hover {
+            @extend %shadow-hover;
+            background-color: rgba(147, 86, 220, 0.1);
+            i {
+                color: $primaire;
+            }
+        }
+    }
+    i {
+        display: inline;
+        text-align: center;
+        vertical-align: middle;
+        padding-left: 1.5em;
+        padding-top: 1.875rem;
+        padding-right: 0.875rem;
+        color: #7d7d7d;
+        &.fa-mobile-alt:before {
+            font-size: 1.25rem;
+        }
+        &.fa-store::before {
+            font-size: 1.125rem;
+        }
+    }
+    &__text {
+        font-weight: 500;
+        height: 100%;
+        padding-top: 1.875rem;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+}

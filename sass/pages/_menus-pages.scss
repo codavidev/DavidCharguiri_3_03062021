@@ -1,0 +1,64 @@
+// PAGES
+.la-pallette {
+    background: url("images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg");
+}
+.la-note {
+    background: url("images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+}
+.la-francaise {
+    background: url("images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg");
+}
+.le-delice {
+    background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+}
+.resto__img {
+    width: 100%;
+    height: 17.25rem;
+    background-size: cover;
+    background-position: center 66%;
+}
+.resto__menu {
+    position: relative;
+    margin-top: -3.5rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    background: $bggrey;
+    border-radius: 2.5rem 2.5rem 0 0;
+}
+.resto__heading {
+    padding-top: toRem(19);
+    padding-left: 0.5rem;
+    font-family: "Shrikhand", cursive;
+    font-size: 1.75rem;
+    &__container {
+        @extend %flex-between;
+        padding: 0.75rem;
+    }
+}
+.menu__heading {
+    padding-top: 1.25rem;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+    font-weight: 300;
+    @include mobile-only {
+        width: 100%;
+    }
+    &:after {
+        margin-top: 0.25rem;
+        height: 0.1875rem;
+        width: 2.5rem;
+        background: $tertiaire;
+        content: "";
+        display: block;
+    }
+}
+.food-container {
+    margin-bottom: toRem(28);
+    @include tablet {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
