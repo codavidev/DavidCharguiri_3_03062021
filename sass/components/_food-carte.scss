@@ -40,19 +40,11 @@
         margin-right: toRem(6);
         display: inline-flex;
         flex-direction: column;
-        white-space: nowrap;
         overflow: hidden;
-        text-overflow: ellipsis;
     }
     &__heading {
         font-size: 1.125rem;
         font-weight: 500;
-        display: inline-block;
-        text-overflow: ellipsis;
-        overflow: hidden;
-        white-space: nowrap;
-    }
-    &:hover .food-carte__heading {
         display: inline-block;
         text-overflow: ellipsis;
         overflow: hidden;
@@ -88,15 +80,16 @@
         align-items: center;
         justify-content: center;
         flex-wrap: nowrap;
+        overflow: hidden;
         background: $tertiaire;
         border-radius: 0 1rem 1rem 0;
-        transition: 0.4s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
     &__add__icon {
-        font-size: toRem(20);
         color: white;
+        font-size: toRem(20);
         opacity: 0;
-        transition: 0.4s ease-in-out;
+        transition: 0.5s ease-in-out;
     }
     &:hover .food-carte__add__btn {
         opacity: 1;

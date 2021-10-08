@@ -25,7 +25,7 @@ a {
 }
 
 .fonctionnement, #restaurants, footer nav, .resto__menu {
-  max-width: 1440px;
+  max-width: 90rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -54,7 +54,7 @@ a {
 @keyframes progressive-appear {
   0% {
     opacity: 0;
-    transform: translateY(4px);
+    transform: translateY(0.25rem);
   }
   100% {
     opacity: 1;
@@ -313,19 +313,11 @@ a {
   margin-right: 0.375rem;
   display: inline-flex;
   flex-direction: column;
-  white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 .food-carte__heading {
   font-size: 1.125rem;
   font-weight: 500;
-  display: inline-block;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-}
-.food-carte:hover .food-carte__heading {
   display: inline-block;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -361,15 +353,16 @@ a {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  overflow: hidden;
   background: #99E2D0;
   border-radius: 0 1rem 1rem 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .food-carte__add__icon {
-  font-size: 1.25rem;
   color: white;
+  font-size: 1.25rem;
   opacity: 0;
-  transition: 0.4s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 .food-carte:hover .food-carte__add__btn {
   opacity: 1;
