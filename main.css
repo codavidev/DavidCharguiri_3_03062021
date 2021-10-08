@@ -600,13 +600,15 @@ footer .devenir-partenaire i {
 
 .le-delice {
   background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+  background-position: center 66% !important;
 }
 
 .resto__img {
   width: 100%;
-  height: 17.25rem;
+  min-height: 17.25rem;
+  height: 30vw;
   background-size: cover;
-  background-position: center 66%;
+  background-position: center 50%;
 }
 
 .resto__menu {
@@ -657,12 +659,6 @@ footer .devenir-partenaire i {
     flex-direction: row;
     flex-wrap: wrap;
   }
-}
-
-.fonctionnement, #restaurants, footer nav, .resto__menu {
-  max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

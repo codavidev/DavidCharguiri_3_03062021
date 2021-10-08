@@ -10,12 +10,14 @@
 }
 .le-delice {
     background: url("images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg");
+    background-position: center 66% !important;
 }
 .resto__img {
     width: 100%;
-    height: 17.25rem;
+    min-height: 17.25rem;
+    height: 30vw;
     background-size: cover;
-    background-position: center 66%;
+    background-position: center 50%;
 }
 .resto__menu {
     position: relative;
