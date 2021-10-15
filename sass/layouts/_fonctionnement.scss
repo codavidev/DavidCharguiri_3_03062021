@@ -12,6 +12,7 @@
         padding-right: 0.25rem;
     }
     &__btn {
+        cursor: pointer;
         display: flex;
         white-space: nowrap;
         background: $bggrey;
