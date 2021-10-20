@@ -13,7 +13,7 @@
     animation: progressive-appear 1.6s forwards;
     @include tablet {
         flex: 2;
-        max-width: 47%;
+        max-width: calc(100%/2 - 28px );
     }
     @include desktop {
         display: flex;

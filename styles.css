@@ -286,7 +286,7 @@ button {
 @media screen and (min-width: 768px) {
   .food-carte {
     flex: 2;
-    max-width: 47%;
+    max-width: calc(100%/2 - 28px );
   }
 }
 @media screen and (min-width: 1440px) {
@@ -659,5 +659,3 @@ footer .devenir-partenaire i {
     flex-wrap: wrap;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
