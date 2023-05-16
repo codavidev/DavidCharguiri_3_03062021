@@ -1,4 +1,4 @@
-# 🚀 Projet ohmyfood - Intégration Responsive Mobile-First en HTML & Animations CSS 🌐
+# 🚀 Projet ohmyfood - Intégration Responsive Mobile-First en HTML & Animations CSS (SASS) 🌐
 ## 🎯 Objectif : Réaliser l'intégration et l'animation CSS d'un site Web
 
 ### 🔧 Fonctionnalités attendues :
