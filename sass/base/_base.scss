@@ -6,6 +6,7 @@
 }
 body {
     width: 100%;
+    min-width: toRem(375);
     background-color: white;
 }
 a {

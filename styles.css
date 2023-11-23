@@ -17,6 +17,7 @@
 
 body {
   width: 100%;
+  min-width: 23.4375rem;
   background-color: white;
 }
 
@@ -287,7 +288,7 @@ button {
 @media screen and (min-width: 768px) {
   .food-carte {
     flex: 2;
-    max-width: calc(100%/2 - 28px );
+    max-width: calc(50% - 28px);
   }
 }
 @media screen and (min-width: 1440px) {
@@ -311,7 +312,7 @@ button {
 @media screen and (min-width: 1128px) {
   .food-carte:nth-child(5) {
     flex: 3;
-    max-width: calc(100%/3 - 28px );
+    max-width: calc(33.3333333333% - 28px);
   }
 }
 .food-carte__text {
@@ -486,7 +487,7 @@ header {
   .fonctionnement__btn {
     flex: 3;
     min-width: fit-content;
-    margin: calc(1.25rem/2) calc((10% - 2.5rem)/3);
+    margin: 0.625rem calc((10% - 2.5rem) / 3);
   }
 }
 .fonctionnement__btn .number {
@@ -660,3 +661,5 @@ footer .devenir-partenaire i {
     flex-wrap: wrap;
   }
 }
+
+/*# sourceMappingURL=styles.css.map */
